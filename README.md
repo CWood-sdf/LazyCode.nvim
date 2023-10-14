@@ -1,0 +1,1 @@
+# LazyCode.nvim
