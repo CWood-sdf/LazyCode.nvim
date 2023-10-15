@@ -1,1 +1,1 @@
-# LazyCode.nvim
+# future.nvim
