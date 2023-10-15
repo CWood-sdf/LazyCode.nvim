@@ -10,7 +10,6 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
         if not hasSetup then
             hasSetup = true
             vim.api.nvim_command("lua require('future')._loadFutures()")
-            print("Loaded lua-futures")
         end
     end,
     group = luaFutures
