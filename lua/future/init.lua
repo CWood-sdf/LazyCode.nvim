@@ -23,6 +23,7 @@ M.profile = function()
     if bufnr == nil then
         bufnr = vim.api.nvim_create_buf(false, true)
     end
+    vim.api.nvim_buf_set_option(bufnr, "modifiable", true)
     local offsetX = 8
     local offsetY = 3
     local width = vim.o.columns - offsetX * 2
