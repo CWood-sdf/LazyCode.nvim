@@ -50,9 +50,16 @@ M.profile = function()
     local seperator = string.rep("-", width)
     table.insert(lines, seperator)
 
+    local totalTime = 0
     for n, time in pairs(profile) do
         table.insert(lines, string.format("  %s: %fms", n, time / 1000000))
+        totalTime = totalTime + time
     end
+
+    table.insert(lines, "\n")
+    table.insert(lines, string.format("  Total: %fms", totalTime / 1000000))
+
+
 
 
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, lines)
