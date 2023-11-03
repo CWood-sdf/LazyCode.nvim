@@ -56,7 +56,7 @@ M.profile = function()
         totalTime = totalTime + time
     end
 
-    table.insert(lines, "\n")
+    table.insert(lines, "")
     table.insert(lines, string.format("  Total: %fms", totalTime / 1000000))
 
 
